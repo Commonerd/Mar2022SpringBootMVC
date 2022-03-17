@@ -7,7 +7,7 @@
 <body>
 	게시글 쓰기 입력 폼:
 	<form method="post">
-		<input type="hidden" name="parentId" value="10" /> 
+		<input type="hidden" name="parentId" value="10a" />
 		제목: <input type="text" name="title" /><br/> 
 		내용: <textarea name="content"></textarea><br/> 
 		<input type="submit" />

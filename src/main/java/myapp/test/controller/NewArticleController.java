@@ -21,7 +21,7 @@ public class NewArticleController {
 	// @RequestMapping(method = RequestMethod.GET)
 	@GetMapping
 	public String form() {
-		return "article/newArticleForm";
+		return "are/newArticleForm";
 	}
 
 	@PostMapping
