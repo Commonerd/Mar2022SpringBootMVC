@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
+<title>안녕 스프링</title>
 </head>
-<body>
-
-</body>
+<body> <!-- m.addAttribute("hello","hello,spring!!"); -->
+${hello}  
+</body>    
 </html>
