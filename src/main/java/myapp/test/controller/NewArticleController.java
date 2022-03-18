@@ -21,11 +21,11 @@ public class NewArticleController {
 	// @RequestMapping(method = RequestMethod.GET)
 	@GetMapping
 	public String form() {
-		return "are/newArticleForm";
+		return "article/newArticleForm";
 	}
 
 	@PostMapping
-	public String submit(@ModelAttribute("command") NewArticleCommand command) {
+	public String submit(NewArticleCommand command) {
 		articleService.writeArticle(command);
 		return "article/newArticleSubmit";
 	}//뉴아티클 커맨드 객체를 만들고, 주소값 전달받고, 그 안에는 타이틀 컨텐트 패런츠 세 개 변수. 이 객체 만들고 객체 주소값 넘겨준다.(뉴아티클커맨드)
