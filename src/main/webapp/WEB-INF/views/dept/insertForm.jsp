@@ -6,10 +6,10 @@
 </head>
 <body><!-- no -->
 <form method="post">
-	부서번호 : <input name="deptno" value="${no}" readonly><br>
+	부서번호 : <input name="deptno" value="${no}"><br>
 	부서명 : <input name="dname"><br>
 	근무지 : <input name="loc">
-	<input type="submit" value="add">
+	<input type="submit" value="delete">
 </form>
 </body>
 </html>

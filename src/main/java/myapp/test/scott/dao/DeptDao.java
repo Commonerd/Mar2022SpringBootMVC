@@ -16,5 +16,6 @@ public interface DeptDao {
 	int maxNo();
 	int addDept(Dept d);//insert, update, delete => 리턴타입이 int가 됨. 
 	//연결된 매퍼파일에서 아이디가 deptAll이라는 sql문을 실행시킨다. 
-	
+	int deleteDept(int deptno);
+	int updateDept(Dept dept);
 }

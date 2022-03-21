@@ -64,4 +64,24 @@ public class DeptController {
 		return "redirect:/";
 	}
 	
+	@GetMapping("/delete/{no}")
+	public String delete(@PathVariable("no") int deptno) {
+		//컨트롤러에서 리턴타입 모르겠으면 그냥 스트링으로 걸어라.
+		System.out.print("delete수행");
+		dservice.deleteDept(deptno);
+		return "redirect:/deptAll";
+	}
+	
+	@GetMapping("/update/{no}")
+	public String updateForm(@PathVariable("no") int deptno, Model m) {
+	//뷰에게 보낼 게 있으면 모델타입 변수도 선언시켜준다.
+		Dept dept = dservice.deptOne(deptno);
+		m.addAttribute("dept",dept); //해당데이터블 모델데이터에 추가한다.
+		return "dept/updateForm"; //jsp는 해당 데이터 꺼내옴.
+}
+	@PostMapping("/update")
+	public String update(Dept dept) { //3개 변수 한번에 받는 dept객체
+		dservice.updateDept(dept);
+		return "redirect:/";
+}
 }

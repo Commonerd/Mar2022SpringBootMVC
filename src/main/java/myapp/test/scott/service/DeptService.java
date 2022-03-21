@@ -27,4 +27,10 @@ public class DeptService {
 	public int addDept(Dept d) {
 		return dao.addDept(d);
 	}
+	public int deleteDept(int deptno) {
+		return dao.deleteDept(deptno);
+	}
+	public int updateDept(Dept dept) {
+		return dao.updateDept(dept);
+	}
 }
