@@ -1,19 +1,30 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>부서 수정</title>
+<title>사원 정보 수정</title>
 </head>
 <body>
-<h3>부서의 정보를 수정합니다.</h3>
-<form method="post" action="/update">
-	사원번호 : <input name=empno value="${emp.empno}"><br>
-	사원이름 : <input name=ename value="${emp.ename}"><br>
-	직급 : <input name=job value="${emp.job}"><br>
-	상사 : <input name=mgr value="${emp.mgr}"><br>
-	입사일 : <input name=hiredate value="${emp.hiredate}"><br>
-	부서번호 : <input name=deptno "${emp.deptno}"><br>
+<form action="/emp/updateEmp" method="post">
+	<input type="hidden" name="_method" value="put">
+	empno  : <input name="empno" value="${emp.empno }" readonly><br>
+	ename  : <input name="ename" value="${emp.ename }"><br>
+	job  : <input name="job" value="${emp.job }"><br>
+	mgr  : <input name="mgr" value="${emp. mgr}"><br>
+	hiredate  : <input name="hiredate" type="date" 
+				value='<fmt:formatDate value="${emp.hiredate}" pattern="yyyy-MM-dd"/>'><br>
+	sal  : <input name="sal" value="${emp.sal }"><br>
+	comm  : <input name="comm" value="${emp.comm}"><br>
+	deptno  : <select name="deptno">
+				<c:forEach items="${list}" var="dept">
+					<option value="${dept.deptno}">${dept.dname}</option>
+				</c:forEach>
+			  </select><br>
+	
 	<input type="submit" value="update">
+
 </form>
 </body>
 </html>
