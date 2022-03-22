@@ -21,7 +21,7 @@ import myapp.test.emp.service.EmpService;
 import myapp.test.scott.dto.Dept;
 
 @Controller
-@RequestMapping("/emp")
+@RequestMapping("/emp") //Controller에서 어떠한 방식으로 처리할지 정의함. 이때 들어온 요청을 특정 메서드와 매핑하기 위해 사용하는 것.
 public class EmpController {
 	
 	@Autowired

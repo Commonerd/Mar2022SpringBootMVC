@@ -6,7 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.Data;
 
-@Data
+@Data //게터세터생성자 대신 만들어주는 어노테이션(롬복)
 public class Emp {
 	
 	private int empno;
