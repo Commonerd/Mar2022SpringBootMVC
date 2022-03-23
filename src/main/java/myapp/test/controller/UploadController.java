@@ -91,7 +91,7 @@ public class UploadController {
 		String fileName = System.currentTimeMillis() + "_" + r.nextInt(50) + "." + ext;
 
 		try {
-			//String path =ResourceUtils.getFIle("classpath:s
+			//String path =ResourceUtils.getFIle("classpath:static/upload/").toPath().toString();
 			String path = request.getServletContext().getRealPath("/mainimg");
 			File f = new File(path, fileName);
 			file.transferTo(f);
